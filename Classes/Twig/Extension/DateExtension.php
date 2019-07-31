@@ -56,7 +56,7 @@ class DateExtension extends AbstractExtension
      * Formats a date with strftime
      *
      * @param EnvironmentTwig $env
-     * @param string|int|DateInterval $date
+     * @param string|int|\DateInterval $date
      * @param string $format
      * @param array $arguments
      *
@@ -70,10 +70,10 @@ class DateExtension extends AbstractExtension
     ) {
         if ($format === null) {
             $formats = $env->getExtension('Twig_Extension_Core')->getDateFormat();
-            $format = $date instanceof DateInterval ? $formats[1] : $formats[0];
+            $format = $date instanceof \DateInterval ? $formats[1] : $formats[0];
         }
 
-        if (!$date instanceof DateInterval) {
+        if (!$date instanceof \DateInterval) {
             $date = twig_date_converter($env, $date);
         }
 

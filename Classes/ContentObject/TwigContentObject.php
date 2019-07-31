@@ -28,6 +28,7 @@ namespace DMK\T3twig\ContentObject;
 use \TYPO3\CMS\Frontend\ContentObject\AbstractContentObject;
 use DMK\T3twig\Twig\RendererTwig as Renderer;
 use DMK\T3twig\Twig\T3TwigException;
+use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 /**
  * Class DataHandler
@@ -49,10 +50,11 @@ class TwigContentObject extends AbstractContentObject
     }
     /**
      *
-     * @param string $name
-     * @param array $configuration
-     * @param string $typoscriptKey
+     * @param string                $name
+     * @param array                 $configuration
+     * @param string                $typoscriptKey
      * @param ContentObjectRenderer $contentObject
+     *
      * @return string
      */
     public function cObjGetSingleExt($name, array $configuration, $typoscriptKey, $contentObject)

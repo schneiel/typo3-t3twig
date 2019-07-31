@@ -1,0 +1,8 @@
+includes:
+    - .Build/vendor/saschaegerer/phpstan-typo3/extension.neon
+    - .Build/vendor/dmk/phpstan-rnbase/extension.neon
+parameters:
+    level: 1
+    paths:
+        - "%currentWorkingDirectory%/Classes"
+    bootstrap: %rootDir%/../../saschaegerer/phpstan-typo3/src/PhpstanTypo3Bootstrap.php

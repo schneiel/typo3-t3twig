@@ -66,7 +66,7 @@ class LinkExtension extends AbstractExtension
 
     /**
      * @param EnvironmentTwig $env
-     * @param                 label
+     * @param string          $label
      * @param array           $arguments
      *
      * @return string
@@ -133,7 +133,7 @@ class LinkExtension extends AbstractExtension
         if ($arguments->hasTsConfig()) {
             $primeval = $env->getConfigurations();
             /**
-             * @var $configurations \Tx_Rnbase_Configuration_Processor
+             * @var \Tx_Rnbase_Configuration_Processor $configurations
              */
             $configurations = \tx_rnbase::makeInstance(
                 'Tx_Rnbase_Configuration_Processor'

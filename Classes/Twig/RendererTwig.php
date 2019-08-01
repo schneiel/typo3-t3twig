@@ -69,7 +69,7 @@ class RendererTwig
      *
      * @param \Tx_Rnbase_Configuration_ProcessorInterface $configurations
      * @param string $confId
-     * @param array $conf
+     * @param string $templateFile
      *
      * @return \DMK\T3twig\Twig\RendererTwig
      */
@@ -90,7 +90,7 @@ class RendererTwig
      *
      * @param \Tx_Rnbase_Configuration_ProcessorInterface $configurations
      * @param string $confId
-     * @param array $conf
+     * @param string $templateFile
      */
     public function __construct(
         \Tx_Rnbase_Configuration_ProcessorInterface $configurations,
@@ -244,9 +244,7 @@ class RendererTwig
             $this->getExtensions()
         );
 
-        /**
-         * @var $template \Twig_Template
-         */
+        /** @var \Twig_Template $template */
         $template = $twigEnv->loadTemplate(
             basename($templateFullFilePath)
         );

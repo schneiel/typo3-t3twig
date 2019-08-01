@@ -42,8 +42,8 @@ use Sys25\RnBase\Frontend\View\AbstractView;
 class RnBaseTwigView extends AbstractView implements ViewInterface
 {
     /**
-     * @param string                                      $view
-     * @param \Tx_Rnbase_Configuration_ProcessorInterface $configurations
+     * @param string           $view
+     * @param RequestInterface $request
      *
      * @return string
      */

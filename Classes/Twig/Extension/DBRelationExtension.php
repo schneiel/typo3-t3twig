@@ -57,8 +57,8 @@ class DBRelationExtension extends \Twig_Extension
 
     /**
      *
-     * @param \DMK\T3twig\Twig\EnvironmentTwig $env
-     * @param string $paramName
+     * @param EnvironmentTwig              $env
+     * @param \Tx_Rnbase_Domain_Model_Base $entity
      * @param array $arguments
      *
      * @return mixed|null
